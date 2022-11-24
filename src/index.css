@@ -1,3 +1,22 @@
+/* variable  */
+
+:root {
+  --primaryLightColor: #d4e6a5;
+  --mainBackground: #f1f5f8;
+  --mainOverlay: rgba(35, 10, 36, 0.4);
+  --mainBlack: #222;
+  --mainSpacing: 0.3rem;
+  --maxWidth: 1000px;
+}
+
+
+/* global */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +24,124 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--mainBlack);
+  background-color: var(--mainBackground);
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--mainSpacing);
+  text-transform: uppercase;
+}
+
+p{
+  margin-bottom: 1.25rem;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--mainBlack);
+}
+
+img{
+  width: 100%;
+  display: block;
+}
+
+
+
+
+/* navbar  */
+nav{
+  display: flex;
+  margin: 10px 30px;
+  justify-content: space-between;
+}
+
+.brand-name img{
+  width: 15rem;
+}
+
+.links{
+  display: flex;
+}
+
+.links li{
+  margin: 0 20px;
+}
+
+
+
+
+
+
+
+.section{
+  max-width: var(--maxWidth);
+  margin: 50px auto;
+  text-align: center;
+}
+
+.cocktail-lists{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 100px;
+}
+
+.cocktail-drinks{
+  border: 1px solid var(--mainBackground);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 2px 2px rgba(35, 10, 36, 0.4);
+}
+
+.cocktail-drinks img{
+  width: 50%;
+}
+
+.cocktail-section{
+  display: flex;
+  gap: 30px;
+}
+
+.cocktail-section img{
+  width: 50%;
+}
+
+.drink-info{
+  padding-top: 60px;
+  text-align: left;
+}
+
+.drink-info ul{
+  padding-left: 20px;
+  list-style: circle;
+}
+
+.drink-data{
+  text-transform: capitalize;
+  color: var(--mainBlack);
+  text-decoration: underline;
+}
+
+.section-form input{
+  border: none;
+  width: 400px;
+  outline: none;
+  height: 50px;
+  padding: 5px;
 }
