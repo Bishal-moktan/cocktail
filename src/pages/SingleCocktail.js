@@ -61,6 +61,7 @@ const SingleCocktail = () => {
         setLoading(false)
       }
     }
+    // document.title = cocktail.name
     fetchData()
   }, [id])
 
